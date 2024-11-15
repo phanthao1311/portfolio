@@ -1,0 +1,291 @@
+/* Reset và chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    color: white;
+    padding: 100px 0; /* Tăng padding để tạo không gian rộng hơn */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Nội dung header */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tiêu đề chính */
+header h1 {
+    font-size: 3.5rem; /* Tăng kích thước font */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px; /* Thêm khoảng cách giữa các chữ */
+    text-transform: uppercase; /* Chữ in hoa để tạo sự nổi bật */
+    animation: fadeInUp 1s forwards;
+}
+
+/* Tiêu đề phụ */
+header p.subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    opacity: 0.8; /* Màu sắc nhẹ nhàng hơn */
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Navigation */
+nav {
+    background-color: #ff9f00;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffdd57;
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Hiệu ứng cho phần header */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Giới thiệu */
+#about {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+#about h2 {
+    font-size: 2.5rem;
+    color: #4e54c8;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.about-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.about-text {
+    max-width: 600px;
+}
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Dự án */
+#projects {
+    padding: 5rem 0;
+    background-color: #f0f0f0;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.project {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+    background-color: #f0f8ff;
+}
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+.project:hover img {
+    transform: scale(1.05);
+}
+
+/* Liên hệ */
+#contact {
+    padding: 5rem 0;
+    background-color: #fff;
+    text-align: center;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+}
+form input {
+    animation-delay: 0.3s;
+}
+form textarea {
+    animation-delay: 0.6s;
+}
+form button {
+    padding: 1rem 2rem;
+    background-color: #ff9f00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button:hover {
+    background-color: #ffdd57;
+}
+
+/* Google Map */
+.map-container {
+    margin-top: 2rem;
+    height: 400px;
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+.social-links {
+    margin-top: 1rem;
+}
+.social-links .social-icon {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.social-links .social-icon:hover {
+    color: #ffdd57;
+}
+/* Hiệu ứng cho phần ảnh trong phần giới thiệu */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.about-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: slideInFromLeft 1s ease-out forwards; /* Áp dụng hiệu ứng */
+    animation-delay: 0.5s; /* Để ảnh xuất hiện sau 0.5 giây */
+}
+/* Đặt nền cho toàn bộ trang */
+body {
+    background-color: #f3f4f6; /* Màu xám nhạt tinh tế */
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Màu chữ đậm để dễ đọc */
+}
+
+/* Tạo hiệu ứng gradient tinh tế cho phần header */
+header {
+    background: linear-gradient(135deg, #4a90e2, #9013fe); /* Xanh lam và tím nhẹ */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Nền của các section */
+section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Nền trắng tinh khiết */
+}
+
+/* Phần dự án */
+.project {
+    background-color: #fafafa; /* Màu xám rất nhạt cho các mục */
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng cho hiệu ứng nổi */
+}
+
+/* Phần footer */
+footer {
+    background-color: #333;
+    color: #fafafa;
+    text-align: center;
+    padding: 20px;
+}
